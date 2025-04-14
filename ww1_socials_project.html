@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Imperial Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: aliceblue;
+            font-size: 120px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: "Imperial Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: aliceblue;
+            font-size: 30px;
+            margin-top: -30px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px 50px;
+            padding: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    background: #b6b6b6;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: height 0.3s ease;
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.card .imgBX {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 220px;
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBX {
+    top: -100px;
+    transform: translateX(-50%) scale(0.75);
+}
+
+.container .card .imgBX img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.card .content {
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card .content h2 {
+    font-size: 40px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.card .content p,
+.card .content button {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Show the <p> and button on hover */
+.card:hover .content p, .content h2
+.card:hover .content button {
+    opacity: 1;
+    transform: translateY(-50%);
+    height: auto;
+}
+
+/* Button Styling */
+.card .content button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .content button:hover {
+    background-color: #555;
+}
+    </style>
+
+    <script>
+        // Toggle the "Read More / Read Less" button and text visibility
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll('.toggle-btn');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const card = this.closest('.card');
+                    const content = card.querySelector('.content');
+                    const text = content.querySelector('.text');
+                    const button = this;
+
+                    // Toggle expansion on card and text
+                    card.classList.toggle('expanded');
+                    if (card.classList.contains('expanded')) {
+                        text.style.maxHeight = text.scrollHeight + "px"; // Expand the text
+                        button.textContent = 'Read Less'; // Change button text
+                    } else {
+                        text.style.maxHeight = '0'; // Collapse the text
+                        button.textContent = 'Read More'; // Change button text back
+                    }
+                });
+            });
+        });
+    </script>
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vince's WW1 Project</title>
+    <link rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Imperial+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>WW1 Trench Warfare</h1>
+    <h2>Made by Vince Basilit</h2>
+
+    <div class="container">
+        <div class="card">
+            <div class="imgBX">
+                <img src="artillery.jpg">
+            </div>
+            <div class="content">
+                <h2>Artillery</h2>
+                <p>The artillery line was where the big field guns were located.
+                    They were used to fire shells at the enemy.
+                    The noise from a barrage of guns was deafening.</p>
+                    <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBX">
+                <img src="bunker.jpg">
+            </div>
+            <div class="content">
+                <h2>Bunker</h2>
+                <p>The underground bunkers were used to store food,
+                    weapons and artillery. They were also used as
+                    command centres and had a telephone link to
+                    report information and receive instructions.
+                    The underground bunkers also offered the men
+                    protection from fire and the elements.</p>
+                    <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBX">
+                <img src="communicationtrench.jpg">
+            </div>
+            <div class="content">
+                <h2>Communication Trenches</h2>
+                <p>The communication trenches were used to move between
+                    the front and rear trenches. They were also used to
+                    transport injured men to the field hospitals.</p>
+                    <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBX">
+                <img src="frontlinetrench.jpg">
+            </div>
+            <div class="content">
+                <h2>Frontline Trench</h2>
+                <p>The front line trenches were generally about 8 feet deep
+                    and between 4 and 6 feet wide. Soldiers would spend around
+                    a week in the front line trench then would spend a week in
+                    the rear trenches or a rest camp. Life at the front line was
+                    not pleasant; soldiers were liable to be hit by enemy fire
+                    or sometimes by their own artillery. The soldier in the picture
+                    is standing on a fire-step built to enable men to see out of the
+                    trench and also to climb out to venture into no-mans land.</p>
+                    <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBX">
+                <img src="machinegunnest.jpg">
+            </div>
+            <div class="content">
+                <h2>Machine Gun Nest</h2>
+                <p>The machine gun nest was where the machine guns were located.
+                    They were manned by two or three soldiers who fired on any
+                    advancing enemy.
+                </p>
+                <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBX">
+                <img src="nomansland.jpg">
+            </div>
+            <div class="content">
+                <h2>No Man's Land</h2>
+                <p>No Mans Land was the name given to the area between the two lines
+                    of WW1 trenches. It was the land that both sides were fighting
+                    to gain control of.</p>
+                    <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBX">
+                <img src="supporttrench.jpg">
+            </div>
+            <div class="content">
+                <h2>Support Trenches</h2>
+                <p>The support WW1 trenches provided a second line of defense in case
+                    the front line trench was taken by the enemy. They also contained
+                    first aid stations and kitchens to ensure men in the front line had
+                    medical treatment and hot food.</p>
+                    <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBX">
+                <img src="traverse.jpg">
+            </div>
+            <div class="content">
+                <h2>Traverse</h2>
+                <p>WW1 Trenches were not built in straight lines. This was so that if the
+                     enemy managed to get into the front line trench they would not have a
+                      straight firing line along the trench. WW1 trenches were therefore 
+                      built with alternating straight and angled lines. The traverse was
+                       the name given to the angled parts of the trench.</p>
+                       <button class="toggle-btn">Read More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
