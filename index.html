@@ -103,6 +103,20 @@
     margin-bottom: 10px;
 }
 
+.card .content h2 {
+    font-size: 40px;
+    color: #111;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide h2 on hover */
+.card:hover .content h2 {
+    opacity: 0;
+}
+
+/* Initially hide <p> and button */
 .card .content p,
 .card .content button {
     opacity: 0;
@@ -112,13 +126,14 @@
     overflow: hidden;
 }
 
-/* Show the <p> and button on hover */
-.card:hover .content p, .content h2
+/* Show only <p> and button on hover */
+.card:hover .content p,
 .card:hover .content button {
     opacity: 1;
     transform: translateY(-50%);
     height: auto;
 }
+
 
 /* Button Styling */
 .card .content button {
