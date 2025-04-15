@@ -97,12 +97,7 @@
     transition: 0.3s ease;
 }
 
-.card .content h2 {
-    font-size: 40px;
-    color: #111;
-    margin-bottom: 10px;
-}
-
+/* Heading Styling */
 .card .content h2 {
     font-size: 40px;
     color: #111;
@@ -116,7 +111,7 @@
     opacity: 0;
 }
 
-/* Initially hide <p> and button */
+/* Hide <p> and button by default */
 .card .content p,
 .card .content button {
     opacity: 0;
@@ -126,14 +121,13 @@
     overflow: hidden;
 }
 
-/* Show only <p> and button on hover */
+/* Show <p> and button on hover */
 .card:hover .content p,
 .card:hover .content button {
     opacity: 1;
     transform: translateY(-50%);
     height: auto;
 }
-
 
 /* Button Styling */
 .card .content button {
@@ -151,32 +145,30 @@
 .card .content button:hover {
     background-color: #555;
 }
-    </style>
-
+</style>
     <script>
-        // Toggle the "Read More / Read Less" button and text visibility
         document.addEventListener("DOMContentLoaded", () => {
-            const buttons = document.querySelectorAll('.toggle-btn');
+    const buttons = document.querySelectorAll('.toggle-btn');
 
-            buttons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const card = this.closest('.card');
-                    const content = card.querySelector('.content');
-                    const text = content.querySelector('.text');
-                    const button = this;
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            const card = this.closest('.card');
+            const content = card.querySelector('.content');
+            const text = content.querySelector('p'); // just grabs the <p>
+            const button = this;
 
-                    // Toggle expansion on card and text
-                    card.classList.toggle('expanded');
-                    if (card.classList.contains('expanded')) {
-                        text.style.maxHeight = text.scrollHeight + "px"; // Expand the text
-                        button.textContent = 'Read Less'; // Change button text
-                    } else {
-                        text.style.maxHeight = '0'; // Collapse the text
-                        button.textContent = 'Read More'; // Change button text back
-                    }
-                });
-            });
+            // Toggle expansion on card and text
+            card.classList.toggle('expanded');
+            if (card.classList.contains('expanded')) {
+                text.style.maxHeight = text.scrollHeight + "px";
+                button.textContent = 'Read Less';
+            } else {
+                text.style.maxHeight = '0';
+                button.textContent = 'Read More';
+            }
         });
+    });
+});
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -198,7 +190,7 @@
             </div>
             <div class="content">
                 <h2>Artillery</h2>
-                <p>The artillery line was where the big field guns were located.
+                <p class="text">The artillery line was where the big field guns were located.
                     They were used to fire shells at the enemy.
                     The noise from a barrage of guns was deafening.</p>
                     <button>Read More</button>
@@ -210,7 +202,7 @@
             </div>
             <div class="content">
                 <h2>Bunker</h2>
-                <p>The underground bunkers were used to store food,
+                <p class="text">The underground bunkers were used to store food,
                     weapons and artillery. They were also used as
                     command centres and had a telephone link to
                     report information and receive instructions.
@@ -225,7 +217,7 @@
             </div>
             <div class="content">
                 <h2>Communication Trenches</h2>
-                <p>The communication trenches were used to move between
+                <p class="text">The communication trenches were used to move between
                     the front and rear trenches. They were also used to
                     transport injured men to the field hospitals.</p>
                     <button>Read More</button>
@@ -237,7 +229,7 @@
             </div>
             <div class="content">
                 <h2>Frontline Trench</h2>
-                <p>The front line trenches were generally about 8 feet deep
+                <p class="text">The front line trenches were generally about 8 feet deep
                     and between 4 and 6 feet wide. Soldiers would spend around
                     a week in the front line trench then would spend a week in
                     the rear trenches or a rest camp. Life at the front line was
@@ -254,7 +246,7 @@
             </div>
             <div class="content">
                 <h2>Machine Gun Nest</h2>
-                <p>The machine gun nest was where the machine guns were located.
+                <p class="text">The machine gun nest was where the machine guns were located.
                     They were manned by two or three soldiers who fired on any
                     advancing enemy.
                 </p>
@@ -267,7 +259,7 @@
             </div>
             <div class="content">
                 <h2>No Man's Land</h2>
-                <p>No Mans Land was the name given to the area between the two lines
+                <p class="text">No Mans Land was the name given to the area between the two lines
                     of WW1 trenches. It was the land that both sides were fighting
                     to gain control of.</p>
                     <button>Read More</button>
@@ -279,7 +271,7 @@
             </div>
             <div class="content">
                 <h2>Support Trenches</h2>
-                <p>The support WW1 trenches provided a second line of defense in case
+                <p class="text">The support WW1 trenches provided a second line of defense in case
                     the front line trench was taken by the enemy. They also contained
                     first aid stations and kitchens to ensure men in the front line had
                     medical treatment and hot food.</p>
@@ -292,7 +284,7 @@
             </div>
             <div class="content">
                 <h2>Traverse</h2>
-                <p>WW1 Trenches were not built in straight lines. This was so that if the
+                <p class="text">WW1 Trenches were not built in straight lines. This was so that if the
                      enemy managed to get into the front line trench they would not have a
                       straight firing line along the trench. WW1 trenches were therefore 
                       built with alternating straight and angled lines. The traverse was
