@@ -46,163 +46,164 @@
             align-items: center;
         }
 
-.card {
-    position: relative;
-    width: 350px;
-    height: 300px;
-    background: #b6b6b6;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: height 0.3s ease;
-}
+        .card {
+            position: relative;
+            width: 350px;
+            height: 300px;
+            background: #b6b6b6;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: height 0.3s ease;
+        }
 
-.card:hover {
-    height: 450px;
-}
+        .card:hover {
+            height: 450px;
+        }
 
-.card .imgBX {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 220px;
-    background: #111;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: 0.5s;
-}
+        .card .imgBX {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 220px;
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
 
-.container .card:hover .imgBX {
-    top: -100px;
-    transform: translateX(-50%) scale(0.75);
-}
+        .container .card:hover .imgBX {
+            top: -100px;
+            transform: translateX(-50%) scale(0.75);
+        }
 
-.container .card .imgBX img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    object-fit: cover;
-}
+        .container .card .imgBX img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+        }
 
-.card .content {
-    position: absolute;
-    top: 260px;
-    width: 100%;
-    padding: 0 20px;
-    text-align: center;
-    transition: 0.3s ease;
-}
+        .card .content {
+            position: absolute;
+            top: 260px;
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
 
-.card .content h2 {
-    font-size: 40px;
-    color: #111;
-    margin-bottom: 10px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
+        .card .content h2 {
+            font-size: 40px;
+            color: #111;
+            margin-bottom: 10px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
 
-.card:hover .content h2 {
-    opacity: 0;
-}
+        .card:hover .content h2 {
+            opacity: 0;
+        }
 
-.card .content p,
-.card .content button {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: 0.4s ease;
-    height: 0;
-    overflow: hidden;
-}
+        .card .content p,
+        .card .content button {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: 0.4s ease;
+            height: 0;
+            overflow: hidden;
+        }
 
-.card:hover .content p,
-.card:hover .content button {
-    opacity: 1;
-    transform: translateY(-50%);
-    height: auto;
-}
+        .card:hover .content p,
+        .card:hover .content button {
+            opacity: 1;
+            transform: translateY(-50%);
+            height: auto;
+        }
 
-.card .content button {
-    margin-top: -10px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #333;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .card .content button {
+            margin-top: -10px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-.card .content button:hover {
-    background-color: #555;
-}
-.video-section {
-    display: flex;
-    gap: 40px;
-    padding: 60px;
-    background-color: #2d2d2d;
-    border-radius: 15px;
-    margin: 60px 0;
-    width: 90%;
-    max-width: 1100px;
-    align-items: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
+        .card .content button:hover {
+            background-color: #555;
+        }
 
-.video-text {
-    flex: 1;
-    color: #e0d5c3;
-    font-family: Verdana, sans-serif;
-}
+        .video-section {
+            display: flex;
+            gap: 40px;
+            padding: 60px;
+            background-color: #2d2d2d;
+            border-radius: 15px;
+            margin: 60px 0;
+            width: 90%;
+            max-width: 1100px;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
 
-.video-text h3 {
-    font-family: "Imperial Script", cursive;
-    font-size: 60px;
-    color: #e8e0d0;
-    margin-bottom: 20px;
-}
+        .video-text {
+            flex: 1;
+            color: #e0d5c3;
+            font-family: Verdana, sans-serif;
+        }
 
-.video-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #dcdcdc;
-}
+        .video-text h3 {
+            font-family: "Imperial Script", cursive;
+            font-size: 60px;
+            color: #e8e0d0;
+            margin-bottom: 20px;
+        }
 
-.video-box {
-    flex-shrink: 0;
-    border: 4px solid #444;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    border-radius: 10px;
-    overflow: hidden;
-}
-</style>
+        .video-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #dcdcdc;
+        }
+
+        .video-box {
+            flex-shrink: 0;
+            border: 4px solid #444;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll('.toggle-btn');
+            const buttons = document.querySelectorAll('.toggle-btn');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            const card = this.closest('.card');
-            const content = card.querySelector('.content');
-            const text = content.querySelector('p'); // just grabs the <p>
-            const button = this;
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const card = this.closest('.card');
+                    const content = card.querySelector('.content');
+                    const text = content.querySelector('p');
+                    const button = this;
 
-            // Toggle expansion on card and text
-            card.classList.toggle('expanded');
-            if (card.classList.contains('expanded')) {
-                text.style.maxHeight = text.scrollHeight + "px";
-                button.textContent = 'Read Less';
-            } else {
-                text.style.maxHeight = '0';
-                button.textContent = 'Read More';
-            }
+                    // Toggle expansion on card and text
+                    card.classList.toggle('expanded');
+                    if (card.classList.contains('expanded')) {
+                        text.style.maxHeight = text.scrollHeight + "px";
+                        button.textContent = 'Read Less';
+                    } else {
+                        text.style.maxHeight = '0';
+                        button.textContent = 'Read More';
+                    }
+                });
+            });
         });
-    });
-});
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -218,129 +219,111 @@
     <h2>Made by Vince Basilit</h2>
 
     <div class="container">
+        <!-- Cards for trenches -->
         <div class="card">
             <div class="imgBX">
-                <img src="artillery.jpg">
+                <img src="artillery.jpg" alt="Artillery Line">
             </div>
             <div class="content">
                 <h2>Artillery</h2>
-                <p class="text">The artillery line was where the big field guns were located.
-                    They were used to fire shells at the enemy.
-                    The noise from a barrage of guns was deafening.</p>
-                    <button>Read More</button>
+                <p class="text">
+                    The artillery line was where the big field guns were located. They were used to fire shells at the enemy. The noise from a barrage of guns was deafening.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
         <div class="card">
             <div class="imgBX">
-                <img src="bunker.jpg">
+                <img src="bunker.jpg" alt="Bunker">
             </div>
             <div class="content">
                 <h2>Bunker</h2>
-                <p class="text">The underground bunkers were used to store food,
-                    weapons and artillery. They were also used as
-                    command centres and had a telephone link to
-                    report information and receive instructions.
-                    The underground bunkers also offered the men
-                    protection from fire and the elements.</p>
-                    <button>Read More</button>
+                <p class="text">
+                    The underground bunkers were used to store food, weapons and artillery. 
+                    They were also used as command centres and had a telephone link to report information and receive instructions. 
+                    The underground bunkers also offered the men protection from fire and the elements.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
         <div class="card">
             <div class="imgBX">
-                <img src="communicationtrench.jpg">
+                <img src="communicationtrench.jpg" alt="Communication Trench">
             </div>
             <div class="content">
                 <h2>Communication Trenches</h2>
-                <p class="text">The communication trenches were used to move between
-                    the front and rear trenches. They were also used to
-                    transport injured men to the field hospitals.</p>
-                    <button>Read More</button>
+                <p class="text">The communication trenches were used to move between the front and rear trenches. They were also used to transport injured men to the field hospitals.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
         <div class="card">
             <div class="imgBX">
-                <img src="frontlinetrench.jpg">
+                <img src="frontlinetrench.jpg" alt="Frontline Trench">
             </div>
             <div class="content">
                 <h2>Frontline Trench</h2>
-                <p class="text">The front line trenches were generally about 8 feet deep
-                    and between 4 and 6 feet wide. Soldiers would spend around
-                    a week in the front line trench then would spend a week in
-                    the rear trenches or a rest camp. Life at the front line was
-                    not pleasant; soldiers were liable to be hit by enemy fire
-                    or sometimes by their own artillery. The soldier in the picture
-                    is standing on a fire-step built to enable men to see out of the
-                    trench and also to climb out to venture into no-mans land.</p>
-                    <button>Read More</button>
+                <p class="text">The front line trenches were generally about 8 feet deep and between 4 and 6 feet wide. Soldiers would spend around a week
+                    in the front line trench then would spend a week in the rear trenches or a rest camp. Life at the front line was not pleasant; soldiers
+                    were liable to be hit by enemy fire or sometimes by their own artillery. The soldier in the picture is standing on a fire-step built to
+                    enable men to see out of the trench and also to climb out to venture into no-mans land.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
         <div class="card">
             <div class="imgBX">
-                <img src="machinegunnest.jpg">
+                <img src="machinegunnest.jpg" alt="Machine Gun Nest">
             </div>
             <div class="content">
                 <h2>Machine Gun Nest</h2>
-                <p class="text">The machine gun nest was where the machine guns were located.
-                    They were manned by two or three soldiers who fired on any
-                    advancing enemy.
-                </p>
-                <button>Read More</button>
+                <p class="text">The machine gun nest was where the machine guns were located. They were manned by two or three soldiers who fired on any advancing enemy.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
         <div class="card">
             <div class="imgBX">
-                <img src="nomansland.jpg">
+                <img src="nomansland.jpg" alt="No Man's Land">
             </div>
             <div class="content">
                 <h2>No Man's Land</h2>
-                <p class="text">No Mans Land was the name given to the area between the two lines
-                    of WW1 trenches. It was the land that both sides were fighting
-                    to gain control of.</p>
-                    <button>Read More</button>
+                <p class="text">No Man's Land was the name given to the area between the two lines of WW1 trenches. It was the land that both sides were fighting to gain control of.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
         <div class="card">
             <div class="imgBX">
-                <img src="supporttrench.jpg">
+                <img src="supporttrench.jpg" alt="Support Trenches">
             </div>
             <div class="content">
                 <h2>Support Trenches</h2>
-                <p class="text">The support WW1 trenches provided a second line of defense in case
-                    the front line trench was taken by the enemy. They also contained
-                    first aid stations and kitchens to ensure men in the front line had
-                    medical treatment and hot food.</p>
-                    <button class="toggle-btn">Read More</button>
+                <p class="text">The support WW1 trenches provided a second line of defense in case the front line trench was taken by the enemy.
+                    They also contained first aid stations and kitchens to ensure men in the front line had medical treatment and hot food.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
         <div class="card">
             <div class="imgBX">
-                <img src="traverse.jpg">
+                <img src="traverse.jpg" alt="Traverse">
             </div>
             <div class="content">
                 <h2>Traverse</h2>
-                <p class="text">WW1 Trenches were not built in straight lines. This was so that if the
-                     enemy managed to get into the front line trench they would not have a
-                      straight firing line along the trench. WW1 trenches were therefore 
-                      built with alternating straight and angled lines. The traverse was
-                       the name given to the angled parts of the trench.</p>
-                       <button>Read More</button>
+                <p class="text">WW1 Trenches were not built in straight lines. This was so that if the enemy managed to get into the front line trench they
+                    would not have a straight firing line along the trench. WW1 trenches were therefore built with alternating straight and angled lines. 
+                    The traverse was the name given to the angled parts of the trench.</p>
+                <button class="toggle-btn">Read More</button>
             </div>
         </div>
-        <div class="video-section">
-            <div class="video-text">
-                <h3>Battle of Passchendaele</h3>
-                <p>
-                    The Battle of Passchendaele, also known as the Third Battle of Ypres, was one of the most brutal and muddy battles of World War I. 
-                    It took place in 1917 and became infamous for the scale of casualties and the harsh trench conditions.
-                </p>
-            </div>
-            <div class="video-box">
-                <iframe width="500" height="315"
-                    src="https://www.youtube.com/embed/pJs_8boUVZM?loop=1&playlist=pJs_8boUVZM"
-                    title="Battle of Passchendaele video" frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <div class="video-text">
+            <h3>Battle of Passchendaele</h3>
+            <p>The Battle of Passchendaele, one of the most notorious battles of WWI, took place in the fall of 1917. It is remembered for its brutal conditions and staggering casualties.</p>
+        </div>
+        <div class="video-box">
+            <iframe width="500" height="315"
+                src="https://www.youtube.com/embed/pJs_8boUVZM?loop=1&playlist=pJs_8boUVZM"
+                title="Battle of Passchendaele video" frameborder="0"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 </body>
